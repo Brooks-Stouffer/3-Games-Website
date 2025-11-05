@@ -1,0 +1,131 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+
+.controls {
+  margin: 20px;
+}
+
+.controls label {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.controls input {
+  width: 60px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.controls button:hover {
+  background-color: #764ba2;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(5, 100px);
+  gap: 8px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #3a3c8f;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+}
+
+.cell:hover:not(.revealed) {
+  background-color: #4a4ea0;
+  transform: translateY(-2px);
+}
+
+.cell.revealed {
+  cursor: default;
+  background-color: #2a2c6f;
+}
+
+.cell.bomb {
+  background-color: #d32f2f;
+}
+
+.cell.safe {
+  background-color: #388e3c;
+}
+
+.game-status {
+  margin: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.Mines-foot {
+  margin-top: 40px;
+  margin-right: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.Mines-foot footer {
+  width: 100%;
+  max-width: 75px;
+}
+
+.Mines-foot a {
+  display: block;
+  width: 100%;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.Mines-foot a:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.Mines-foot a:active {
+  transform: translateY(-2px);
+}
