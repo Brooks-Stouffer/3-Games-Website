@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mines</title>
+    <link rel="stylesheet" href="Mines/mines.css" />
+  </head>
+  <body>
+    <h1>💣 Mines Game</h1>
+    <p>Moves: <span id="moves">0</span></p>
+
+    <div class="game-container">
+      <div class="controls">
+        <label for="bombCount">Number of Bombs:</label>
+        <input type="number" id="bombCount" min="1" max="24" value="5" />
+        <button onclick="startNewGame()">New Game</button>
+      </div>
+
+      <div class="game-board" id="gameBoard"></div>
+    </div>
+
+    <script src="Mines/mines.js"></script>
+    <script>
+      function startNewGame() {
+        const bombInput = document.getElementById("bombCount");
+        const numBombs = parseInt(bombInput.value) || 5;
+        createBoard(Math.min(Math.max(numBombs, 1), 24));
+      }
+    </script>
+
+    <div class="Mines-foot">
+      <footer><a href="index.html">Home</a></footer>
+    </div>
+  </body>
+</html>
