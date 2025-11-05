@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Lizard Spock</title>
+    <link rel="stylesheet" href="RPS/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🎮 Rock Paper Scissors Lizard Spock 🎮</h1>
+      <p class="subtitle">Choose your weapon wisely!</p>
+    </header>
+    <div class="rules-header">
+      <p>This is a game of rock paper scissors with a twist</p>
+    </div>
+    <div class="rps-rules">
+      <ul>
+        <li>Rock crushes Scissors</li>
+        <li>Rock crushes Lizard</li>
+        <li>Paper covers Rock</li>
+        <li>Paper disproves Spock</li>
+        <li>Scissors cuts Paper</li>
+        <li>Scissors decapitates Lizard</li>
+        <li>Lizard poisons Spock</li>
+        <li>Lizard eats Paper</li>
+        <li>Spock vaporizes Rock</li>
+        <li>Spock smashes Scissors</li>
+      </ul>
+    </div>
+    <div class="score-board">
+      <div class="score-display">
+        <div class="score-section">
+          <div class="badge" id="user-label">Player</div>
+          <div class="score" id="user-score">0</div>
+        </div>
+        <div class="separator">:</div>
+        <div class="score-section">
+          <div class="badge" id="comp-label">Computer</div>
+          <div class="score" id="comp-score">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result">
+      <p id="result-text">Make your move!</p>
+    </div>
+
+    <div class="choices">
+      <div class="choice" id="r">
+        <span class="choice-emoji">🪨</span>
+        <span class="choice-label">Rock</span>
+      </div>
+      <div class="choice" id="p">
+        <span class="choice-emoji">📄</span>
+        <span class="choice-label">Paper</span>
+      </div>
+      <div class="choice" id="s">
+        <span class="choice-emoji">✂️</span>
+        <span class="choice-label">Scissors</span>
+      </div>
+      <div class="choice" id="l">
+        <span class="choice-emoji">🦎</span>
+        <span class="choice-label">Lizard</span>
+      </div>
+      <div class="choice" id="sp">
+        <span class="choice-emoji">🖖</span>
+        <span class="choice-label">Spock</span>
+      </div>
+    </div>
+
+    <p id="action-message">Pick your move to begin!</p>
+    <script src="RPS/app.js"></script>
+    <div class="RPS-Footer">
+      <footer><a href="index.html">Home</a> &nbsp;</footer>
+    </div>
+  </body>
+</html>
